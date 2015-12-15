@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		329CD2491C1FF70A00B5365B /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 329CD23D1C1FF70A00B5365B /* ioapi.c */; };
+		329CD24A1C1FF70A00B5365B /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 329CD23F1C1FF70A00B5365B /* mztools.c */; };
+		329CD24B1C1FF70A00B5365B /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 329CD2411C1FF70A00B5365B /* unzip.c */; };
+		329CD24C1C1FF70A00B5365B /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 329CD2431C1FF70A00B5365B /* zip.c */; };
+		329CD24D1C1FF70A00B5365B /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 329CD2461C1FF70A00B5365B /* SSZipArchive.m */; };
+		329CD24E1C1FF70A00B5365B /* ZipPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 329CD2481C1FF70A00B5365B /* ZipPlugin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		32D980DB1BE9F11C00FA27E5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		329CD23C1C1FF70A00B5365B /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		329CD23D1C1FF70A00B5365B /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		329CD23E1C1FF70A00B5365B /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		329CD23F1C1FF70A00B5365B /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		329CD2401C1FF70A00B5365B /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		329CD2411C1FF70A00B5365B /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		329CD2421C1FF70A00B5365B /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		329CD2431C1FF70A00B5365B /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		329CD2441C1FF70A00B5365B /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		329CD2451C1FF70A00B5365B /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		329CD2461C1FF70A00B5365B /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		329CD2471C1FF70A00B5365B /* ZipPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipPlugin.h; sourceTree = "<group>"; };
+		329CD2481C1FF70A00B5365B /* ZipPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipPlugin.m; sourceTree = "<group>"; };
+		32D980DD1BE9F11C00FA27E5 /* libRCTZip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTZip.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32D980DA1BE9F11C00FA27E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		329CD23B1C1FF70A00B5365B /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				329CD23C1C1FF70A00B5365B /* crypt.h */,
+				329CD23D1C1FF70A00B5365B /* ioapi.c */,
+				329CD23E1C1FF70A00B5365B /* ioapi.h */,
+				329CD23F1C1FF70A00B5365B /* mztools.c */,
+				329CD2401C1FF70A00B5365B /* mztools.h */,
+				329CD2411C1FF70A00B5365B /* unzip.c */,
+				329CD2421C1FF70A00B5365B /* unzip.h */,
+				329CD2431C1FF70A00B5365B /* zip.c */,
+				329CD2441C1FF70A00B5365B /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		32D980D41BE9F11C00FA27E5 = {
+			isa = PBXGroup;
+			children = (
+				32D980DF1BE9F11C00FA27E5 /* RCTZip */,
+				32D980DE1BE9F11C00FA27E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		32D980DE1BE9F11C00FA27E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32D980DD1BE9F11C00FA27E5 /* libRCTZip.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32D980DF1BE9F11C00FA27E5 /* RCTZip */ = {
+			isa = PBXGroup;
+			children = (
+				329CD23B1C1FF70A00B5365B /* minizip */,
+				329CD2451C1FF70A00B5365B /* SSZipArchive.h */,
+				329CD2461C1FF70A00B5365B /* SSZipArchive.m */,
+				329CD2471C1FF70A00B5365B /* ZipPlugin.h */,
+				329CD2481C1FF70A00B5365B /* ZipPlugin.m */,
+			);
+			path = RCTZip;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		32D980DC1BE9F11C00FA27E5 /* RCTZip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32D980F11BE9F11C00FA27E5 /* Build configuration list for PBXNativeTarget "RCTZip" */;
+			buildPhases = (
+				32D980D91BE9F11C00FA27E5 /* Sources */,
+				32D980DA1BE9F11C00FA27E5 /* Frameworks */,
+				32D980DB1BE9F11C00FA27E5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RCTZip;
+			productName = RCTZip;
+			productReference = 32D980DD1BE9F11C00FA27E5 /* libRCTZip.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32D980D51BE9F11C00FA27E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = remobile;
+				TargetAttributes = {
+					32D980DC1BE9F11C00FA27E5 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 32D980D81BE9F11C00FA27E5 /* Build configuration list for PBXProject "RCTZip" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 32D980D41BE9F11C00FA27E5;
+			productRefGroup = 32D980DE1BE9F11C00FA27E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32D980DC1BE9F11C00FA27E5 /* RCTZip */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32D980D91BE9F11C00FA27E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				329CD24E1C1FF70A00B5365B /* ZipPlugin.m in Sources */,
+				329CD24B1C1FF70A00B5365B /* unzip.c in Sources */,
+				329CD24D1C1FF70A00B5365B /* SSZipArchive.m in Sources */,
+				329CD24C1C1FF70A00B5365B /* zip.c in Sources */,
+				329CD24A1C1FF70A00B5365B /* mztools.c in Sources */,
+				329CD2491C1FF70A00B5365B /* ioapi.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		32D980EF1BE9F11C00FA27E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		32D980F01BE9F11C00FA27E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		32D980F21BE9F11C00FA27E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../react-native/React/**",
+					"$(SRCROOT)/../../react-native-cordova/ios/RCTCordova",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		32D980F31BE9F11C00FA27E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../react-native/React/**",
+					"$(SRCROOT)/../../react-native-cordova/ios/RCTCordova",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32D980D81BE9F11C00FA27E5 /* Build configuration list for PBXProject "RCTZip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32D980EF1BE9F11C00FA27E5 /* Debug */,
+				32D980F01BE9F11C00FA27E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32D980F11BE9F11C00FA27E5 /* Build configuration list for PBXNativeTarget "RCTZip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32D980F21BE9F11C00FA27E5 /* Debug */,
+				32D980F31BE9F11C00FA27E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 32D980D51BE9F11C00FA27E5 /* Project object */;
+}
