@@ -1,29 +1,31 @@
 {
     "name": "@remobile/react-native-zip",
-        "version": "1.0.0",
-        "description": "A unzip for react-native, code come from cordova, support for android and ios",
-        "main": "index.js",
-        "author": {
-            "name": "YunJiang.Fang",
-            "email": "42550564@qq.com"
-        },
-        "license": "MIT",
-        "keywords": [
-            "react-native",
-            "react-component",
-            "ios",
-            "android",
-            "zip",
-            "unzip",
-            "remobile",
-            "mobile"
-        ],
-        "homepage": "https://github.com/remobile/react-native-zip",
-        "bugs": {
-            "url": "https://github.com/remobile/react-native-zip/issues"
-        },
-        "repository": {
-            "type": "git",
-            "url": "git://github.com/remobile/react-native-zip.git"
-        }
+    "version": "1.0.0",
+    "description": "A unzip for react-native, code come from cordova, support for android and ios",
+    "main": "index.js",
+    "author": {
+        "name": "YunJiang.Fang",
+        "email": "42550564@qq.com"
+    },
+    "license": "MIT",
+    "keywords": [
+        "react-native",
+        "react-component",
+        "ios",
+        "android",
+        "compress",
+        "uncompress",
+        "zip",
+        "unzip",
+        "remobile",
+        "mobile"
+    ],
+    "homepage": "https://github.com/remobile/react-native-zip",
+    "bugs": {
+        "url": "https://github.com/remobile/react-native-zip/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/remobile/react-native-zip.git"
+    }
 }
