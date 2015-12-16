@@ -1,6 +1,6 @@
 {
     "name": "@remobile/react-native-zip",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A unzip for react-native, code come from cordova, support for android and ios",
     "main": "index.js",
     "author": {

@@ -1,6 +1,6 @@
 
-var React = require('react-native');
-var { NativeAppEventEmitter, DeviceEventEmitter} = React;
+var {NativeAppEventEmitter, DeviceEventEmitter, Platform} = require('react-native');
+var EventEmitter = Platform.OS==="android"?DeviceEventEmitter:NativeAppEventEmitter;
 var exec = require('@remobile/react-native-cordova').exec;
 
 var jobId = 0;
@@ -23,10 +23,7 @@ exports.unzip = function(fileName, outputDirectory, callback, progress) {
     var subscription;
 
     if (progress) {
-      if (NativeAppEventEmitter.addListener)
-        subscription = NativeAppEventEmitter.addListener('UnzipProgress-' + jobId, progress);
-      if (DeviceEventEmitter.addListener)
-        subscription = DeviceEventEmitter.addListener('UnzipProgress-' + jobId, progress);
+        subscription = EventEmitter.addListener('UnzipProgress-' + jobId, (result)=>progress(newProgressEvent(result)));
     }
 
     var win = function(result) {
