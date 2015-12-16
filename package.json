@@ -1,6 +1,6 @@
 {
     "name": "@remobile/react-native-zip",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A unzip for react-native, code come from cordova, support for android and ios",
     "main": "index.js",
     "author": {
@@ -27,5 +27,8 @@
     "repository": {
         "type": "git",
         "url": "git://github.com/remobile/react-native-zip.git"
+    },
+    "peerDependencies": {
+        "@remobile/react-native-cordova": "^1.0.8"
     }
 }
