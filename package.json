@@ -29,6 +29,6 @@
         "url": "git://github.com/remobile/react-native-zip.git"
     },
     "peerDependencies": {
-        "@remobile/react-native-cordova": "^1.0.8"
+        "@remobile/react-native-cordova": "^1.0.9"
     }
 }
