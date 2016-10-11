@@ -1,14 +1,7 @@
 
-var {NativeAppEventEmitter, DeviceEventEmitter, Platform} = require('react-native');
-var EventEmitter = Platform.OS==="android"?DeviceEventEmitter:NativeAppEventEmitter;
+var {NativeEventEmitter, DeviceEventEmitter, Platform, NativeModules} = require('react-native');
+var EventEmitter = Platform.OS==="android"?DeviceEventEmitter:new NativeEventEmitter(NativeModules.Zip);
 var exec = require('@remobile/react-native-cordova').exec;
-
-var jobId = 0;
-
-var getJobId = () => {
-  jobId += 1;
-  return jobId;
-};
 
 function newProgressEvent(result) {
     var event = {
@@ -18,23 +11,23 @@ function newProgressEvent(result) {
     return event;
 }
 
-exports.unzip = function(fileName, outputDirectory, callback, progress) {
-    var jobId = getJobId();
-    var subscription;
+exports.unzip = function(fileName, outputDirectory, callback, progressCallback) {
+    var subscription = null;
 
-    if (progress) {
-        subscription = EventEmitter.addListener('UnzipProgress-' + jobId, (result)=>progress(newProgressEvent(result)));
+    if (progressCallback) {
+        subscription = EventEmitter.addListener('UnzipProgress', (result)=>progressCallback(newProgressEvent(result)));
     }
-
     var win = function(result) {
-        console.log(result);
-        subscription.remove();
-        callback&&callback(0);
+        subscription && subscription.remove();
+        if (callback) {
+            callback(0);
+        }
     };
     var fail = function(result) {
-        console.log(result);
-        subscription.remove();
-        callback&&callback(-1);
+        subscription && subscription.remove();
+        if (callback) {
+            callback(-1);
+        }
     };
-    exec(win, fail, 'Zip', 'unzip', [fileName, outputDirectory, jobId]);
+    exec(win, fail, 'Zip', 'unzip', [fileName, outputDirectory]);
 };

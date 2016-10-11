@@ -12,14 +12,12 @@ import com.facebook.react.uimanager.ViewManager;
 
 import com.remobile.zip.Zip;
 
-
 public class RCTZipPackage implements ReactPackage {
-
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         return Arrays.<NativeModule>asList(
-                                           new Zip(reactContext)
-                                           );
+                new Zip(reactContext)
+        );
     }
 
     @Override

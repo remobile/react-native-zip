@@ -1,35 +1,6 @@
 #import "ZipPlugin.h"
 
-@interface ZipArchiveDelegate : NSObject  <SSZipArchiveDelegate>
-@property (nonatomic, assign) int jobId;
-@property (nonatomic, weak) RCTBridge *bridge;
-
-- (id)initWithJobId:(int)jobId andBridge:(RCTBridge *)bridge;
-- (void)zipArchiveWillUnzipFileAtIndex:(NSInteger)fileIndex totalFiles:(NSInteger)totalFiles archivePath:(NSString *)archivePath fileInfo:(unz_file_info)fileInfo;
-@end
-
-@implementation ZipArchiveDelegate
-- (id)initWithJobId:(int)jobId andBridge:(RCTBridge *)bridge {
-    self = [super init];
-    if (self) {
-        self.jobId = jobId;
-        self.bridge = bridge;
-    }
-    return self;
-}
-
-- (void)zipArchiveWillUnzipFileAtIndex:(NSInteger)fileIndex totalFiles:(NSInteger)totalFiles archivePath:(NSString *)archivePath fileInfo:(unz_file_info)fileInfo
-{
-    NSMutableDictionary* message = [NSMutableDictionary dictionaryWithCapacity:2];
-    [message setObject:[NSNumber numberWithLongLong:fileIndex] forKey:@"loaded"];
-    [message setObject:[NSNumber numberWithLongLong:totalFiles] forKey:@"total"];
-    
-    [self.bridge.eventDispatcher sendAppEventWithName:[NSString stringWithFormat:@"UnzipProgress-%d", self.jobId] body:message];
-}
-@end
-
 @implementation ZipPlugin
-@synthesize bridge = _bridge;
 
 RCT_EXPORT_MODULE(Zip)
 
@@ -57,14 +28,12 @@ RCT_EXPORT_CORDOVA_METHOD(unzip);
         @try {
             NSString *zipURL = [command.arguments objectAtIndex:0];
             NSString *destinationURL = [command.arguments objectAtIndex:1];
-            int jobId = [[command.arguments objectAtIndex:2]intValue];
-            ZipArchiveDelegate *delegate = [[ZipArchiveDelegate alloc]initWithJobId:jobId andBridge:self.bridge];
             NSError *error;
 
             NSString *zipPath = [self pathForURL:zipURL];
             NSString *destinationPath = [self pathForURL:destinationURL];
 
-            if([SSZipArchive unzipFileAtPath:zipPath toDestination:destinationPath overwrite:YES password:nil error:&error delegate:delegate]) {
+            if([SSZipArchive unzipFileAtPath:zipPath toDestination:destinationPath overwrite:YES password:nil error:&error delegate:self]) {
                 pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
             } else {
                 NSLog(@"%@ - %@", @"Error occurred during unzipping", [error localizedDescription]);
@@ -77,5 +46,14 @@ RCT_EXPORT_CORDOVA_METHOD(unzip);
         
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }];
+}
+
+- (void)zipArchiveWillUnzipFileAtIndex:(NSInteger)fileIndex totalFiles:(NSInteger)totalFiles archivePath:(NSString *)archivePath fileInfo:(unz_file_info)fileInfo
+{
+    NSMutableDictionary* message = [NSMutableDictionary dictionaryWithCapacity:2];
+    [message setObject:[NSNumber numberWithLongLong:fileIndex] forKey:@"loaded"];
+    [message setObject:[NSNumber numberWithLongLong:totalFiles] forKey:@"total"];
+    
+    [self sendEventWithName:@"UnzipProgress" body:message];
 }
 @end

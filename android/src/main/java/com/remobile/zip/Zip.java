@@ -8,15 +8,13 @@ import java.io.InputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-
-import android.app.Activity;
 import android.net.Uri;
+
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.util.Log;
-
-import com.facebook.common.logging.FLog;
 import com.remobile.cordova.*;
 import com.facebook.react.bridge.*;
 import com.remobile.cordova.CordovaResourceApi.OpenForReadResult;
@@ -24,11 +22,9 @@ import com.remobile.cordova.CordovaResourceApi.OpenForReadResult;
 public class Zip extends CordovaPlugin {
 
     private static final String LOG_TAG = "Zip";
-    private CordovaResourceApi mResourceApi;
 
     public Zip(ReactApplicationContext reactContext) {
         super(reactContext);
-        mResourceApi = new CordovaResourceApi(reactContext);
     }
 
     @Override
@@ -36,24 +32,15 @@ public class Zip extends CordovaPlugin {
         return "Zip";
     }
 
-    public CordovaResourceApi getResourceApi() {
-        return mResourceApi;
-    }
-
     @ReactMethod
     public void unzip(ReadableArray args, Callback success, Callback error) {
-        String action = "unzip";
-        try {
-            this.execute(action, new CordovaArgs(JsonConvert.reactToJSON(args)), new CallbackContext(success, error));
-        } catch (Exception ex) {
-            FLog.e(LOG_TAG, "Unexpected error:" + ex.getMessage());
-        }
+        executeReactMethod("unzip", args, success, error);
     }
 
-
-    public boolean execute(String action, CordovaArgs args, final CallbackContext callbackContext) throws JSONException {
+    @Override
+    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
         if ("unzip".equals(action)) {
-            unzip(args, callbackContext);
+            unzip(new CordovaArgs(args), callbackContext);
             return true;
         }
         return false;
@@ -81,14 +68,13 @@ public class Zip extends CordovaPlugin {
         try {
             String zipFileName = args.getString(0);
             String outputDirectory = args.getString(1);
-            int jobId = args.getInt(2);
 
             // Since Cordova 3.3.0 and release of File plugins, files are accessed via cdvfile://
             // Accept a path or a URI for the source zip.
             Uri zipUri = getUriForArg(zipFileName);
             Uri outputUri = getUriForArg(outputDirectory);
 
-            CordovaResourceApi resourceApi = this.getResourceApi();
+            CordovaResourceApi resourceApi = webView.getResourceApi();
 
             File tempFile = resourceApi.mapUriToFile(zipUri);
             if (tempFile == null || !tempFile.exists()) {
@@ -167,13 +153,13 @@ public class Zip extends CordovaPlugin {
 
                 }
                 progress.addLoaded(ze.getCompressedSize());
-                updateProgress(callbackContext, progress, jobId);
+                updateProgress(callbackContext, progress);
                 zis.closeEntry();
             }
 
             // final progress = 100%
             progress.setLoaded(progress.getTotal());
-            updateProgress(callbackContext, progress, jobId);
+            updateProgress(callbackContext, progress);
 
             if (anyEntries)
                 callbackContext.success();
@@ -193,12 +179,12 @@ public class Zip extends CordovaPlugin {
         }
     }
 
-    private void updateProgress(CallbackContext callbackContext, ProgressEvent progress, int jobId) throws JSONException {
-        Zip.this.sendJSEvent("UnzipProgress-"+jobId, JsonConvert.jsonToReact(progress.toJSONObject()));
+    private void updateProgress(CallbackContext callbackContext, ProgressEvent progress) throws JSONException {
+        Zip.this.sendJSEvent("UnzipProgress", JsonConvert.jsonToReact(progress.toJSONObject()));
     }
 
     private Uri getUriForArg(String arg) {
-        CordovaResourceApi resourceApi = this.getResourceApi();
+        CordovaResourceApi resourceApi = webView.getResourceApi();
         Uri tmpTarget = Uri.parse(arg);
         return resourceApi.remapUri(
                 tmpTarget.getScheme() != null ? tmpTarget : Uri.fromFile(new File(arg)));

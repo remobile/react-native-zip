@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		329CD2491C1FF70A00B5365B /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 329CD23D1C1FF70A00B5365B /* ioapi.c */; };
-		329CD24A1C1FF70A00B5365B /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 329CD23F1C1FF70A00B5365B /* mztools.c */; };
-		329CD24B1C1FF70A00B5365B /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 329CD2411C1FF70A00B5365B /* unzip.c */; };
-		329CD24C1C1FF70A00B5365B /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 329CD2431C1FF70A00B5365B /* zip.c */; };
-		329CD24D1C1FF70A00B5365B /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 329CD2461C1FF70A00B5365B /* SSZipArchive.m */; };
-		329CD24E1C1FF70A00B5365B /* ZipPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 329CD2481C1FF70A00B5365B /* ZipPlugin.m */; };
+		32B25F971D936C8500C56855 /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B25F751D936C8500C56855 /* aescrypt.c */; };
+		32B25F981D936C8500C56855 /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B25F761D936C8500C56855 /* aeskey.c */; };
+		32B25F991D936C8500C56855 /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B25F781D936C8500C56855 /* aestab.c */; };
+		32B25F9A1D936C8500C56855 /* entropy.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B25F7C1D936C8500C56855 /* entropy.c */; };
+		32B25F9B1D936C8500C56855 /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B25F7E1D936C8500C56855 /* fileenc.c */; };
+		32B25F9C1D936C8500C56855 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B25F801D936C8500C56855 /* hmac.c */; };
+		32B25F9D1D936C8500C56855 /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B25F821D936C8500C56855 /* prng.c */; };
+		32B25F9E1D936C8500C56855 /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B25F841D936C8500C56855 /* pwd2key.c */; };
+		32B25F9F1D936C8500C56855 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B25F861D936C8500C56855 /* sha1.c */; };
+		32B25FA01D936C8500C56855 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B25F8B1D936C8500C56855 /* ioapi.c */; };
+		32B25FA11D936C8500C56855 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B25F8D1D936C8500C56855 /* mztools.c */; };
+		32B25FA21D936C8500C56855 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B25F8F1D936C8500C56855 /* unzip.c */; };
+		32B25FA31D936C8500C56855 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B25F911D936C8500C56855 /* zip.c */; };
+		32B25FA41D936C8500C56855 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B25F941D936C8500C56855 /* SSZipArchive.m */; };
+		32B25FA51D936C8500C56855 /* ZipPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B25F961D936C8500C56855 /* ZipPlugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,19 +37,41 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		329CD23C1C1FF70A00B5365B /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
-		329CD23D1C1FF70A00B5365B /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
-		329CD23E1C1FF70A00B5365B /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
-		329CD23F1C1FF70A00B5365B /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
-		329CD2401C1FF70A00B5365B /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
-		329CD2411C1FF70A00B5365B /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
-		329CD2421C1FF70A00B5365B /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
-		329CD2431C1FF70A00B5365B /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
-		329CD2441C1FF70A00B5365B /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
-		329CD2451C1FF70A00B5365B /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
-		329CD2461C1FF70A00B5365B /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
-		329CD2471C1FF70A00B5365B /* ZipPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipPlugin.h; sourceTree = "<group>"; };
-		329CD2481C1FF70A00B5365B /* ZipPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipPlugin.m; sourceTree = "<group>"; };
+		32B25F731D936C8500C56855 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		32B25F741D936C8500C56855 /* aes_via_ace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes_via_ace.h; sourceTree = "<group>"; };
+		32B25F751D936C8500C56855 /* aescrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aescrypt.c; sourceTree = "<group>"; };
+		32B25F761D936C8500C56855 /* aeskey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aeskey.c; sourceTree = "<group>"; };
+		32B25F771D936C8500C56855 /* aesopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aesopt.h; sourceTree = "<group>"; };
+		32B25F781D936C8500C56855 /* aestab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aestab.c; sourceTree = "<group>"; };
+		32B25F791D936C8500C56855 /* aestab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aestab.h; sourceTree = "<group>"; };
+		32B25F7A1D936C8500C56855 /* brg_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_endian.h; sourceTree = "<group>"; };
+		32B25F7B1D936C8500C56855 /* brg_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_types.h; sourceTree = "<group>"; };
+		32B25F7C1D936C8500C56855 /* entropy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = entropy.c; sourceTree = "<group>"; };
+		32B25F7D1D936C8500C56855 /* entropy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entropy.h; sourceTree = "<group>"; };
+		32B25F7E1D936C8500C56855 /* fileenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fileenc.c; sourceTree = "<group>"; };
+		32B25F7F1D936C8500C56855 /* fileenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileenc.h; sourceTree = "<group>"; };
+		32B25F801D936C8500C56855 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		32B25F811D936C8500C56855 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		32B25F821D936C8500C56855 /* prng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prng.c; sourceTree = "<group>"; };
+		32B25F831D936C8500C56855 /* prng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prng.h; sourceTree = "<group>"; };
+		32B25F841D936C8500C56855 /* pwd2key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pwd2key.c; sourceTree = "<group>"; };
+		32B25F851D936C8500C56855 /* pwd2key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pwd2key.h; sourceTree = "<group>"; };
+		32B25F861D936C8500C56855 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		32B25F871D936C8500C56855 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		32B25F881D936C8500C56855 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		32B25F8A1D936C8500C56855 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		32B25F8B1D936C8500C56855 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		32B25F8C1D936C8500C56855 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		32B25F8D1D936C8500C56855 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		32B25F8E1D936C8500C56855 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		32B25F8F1D936C8500C56855 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		32B25F901D936C8500C56855 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		32B25F911D936C8500C56855 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		32B25F921D936C8500C56855 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		32B25F931D936C8500C56855 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		32B25F941D936C8500C56855 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		32B25F951D936C8500C56855 /* ZipPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipPlugin.h; sourceTree = "<group>"; };
+		32B25F961D936C8500C56855 /* ZipPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipPlugin.m; sourceTree = "<group>"; };
 		32D980DD1BE9F11C00FA27E5 /* libRCTZip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTZip.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -55,18 +86,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		329CD23B1C1FF70A00B5365B /* minizip */ = {
+		32B25F721D936C8500C56855 /* aes */ = {
 			isa = PBXGroup;
 			children = (
-				329CD23C1C1FF70A00B5365B /* crypt.h */,
-				329CD23D1C1FF70A00B5365B /* ioapi.c */,
-				329CD23E1C1FF70A00B5365B /* ioapi.h */,
-				329CD23F1C1FF70A00B5365B /* mztools.c */,
-				329CD2401C1FF70A00B5365B /* mztools.h */,
-				329CD2411C1FF70A00B5365B /* unzip.c */,
-				329CD2421C1FF70A00B5365B /* unzip.h */,
-				329CD2431C1FF70A00B5365B /* zip.c */,
-				329CD2441C1FF70A00B5365B /* zip.h */,
+				32B25F731D936C8500C56855 /* aes.h */,
+				32B25F741D936C8500C56855 /* aes_via_ace.h */,
+				32B25F751D936C8500C56855 /* aescrypt.c */,
+				32B25F761D936C8500C56855 /* aeskey.c */,
+				32B25F771D936C8500C56855 /* aesopt.h */,
+				32B25F781D936C8500C56855 /* aestab.c */,
+				32B25F791D936C8500C56855 /* aestab.h */,
+				32B25F7A1D936C8500C56855 /* brg_endian.h */,
+				32B25F7B1D936C8500C56855 /* brg_types.h */,
+				32B25F7C1D936C8500C56855 /* entropy.c */,
+				32B25F7D1D936C8500C56855 /* entropy.h */,
+				32B25F7E1D936C8500C56855 /* fileenc.c */,
+				32B25F7F1D936C8500C56855 /* fileenc.h */,
+				32B25F801D936C8500C56855 /* hmac.c */,
+				32B25F811D936C8500C56855 /* hmac.h */,
+				32B25F821D936C8500C56855 /* prng.c */,
+				32B25F831D936C8500C56855 /* prng.h */,
+				32B25F841D936C8500C56855 /* pwd2key.c */,
+				32B25F851D936C8500C56855 /* pwd2key.h */,
+				32B25F861D936C8500C56855 /* sha1.c */,
+				32B25F871D936C8500C56855 /* sha1.h */,
+			);
+			path = aes;
+			sourceTree = "<group>";
+		};
+		32B25F891D936C8500C56855 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				32B25F8A1D936C8500C56855 /* crypt.h */,
+				32B25F8B1D936C8500C56855 /* ioapi.c */,
+				32B25F8C1D936C8500C56855 /* ioapi.h */,
+				32B25F8D1D936C8500C56855 /* mztools.c */,
+				32B25F8E1D936C8500C56855 /* mztools.h */,
+				32B25F8F1D936C8500C56855 /* unzip.c */,
+				32B25F901D936C8500C56855 /* unzip.h */,
+				32B25F911D936C8500C56855 /* zip.c */,
+				32B25F921D936C8500C56855 /* zip.h */,
 			);
 			path = minizip;
 			sourceTree = "<group>";
@@ -90,11 +149,13 @@
 		32D980DF1BE9F11C00FA27E5 /* RCTZip */ = {
 			isa = PBXGroup;
 			children = (
-				329CD23B1C1FF70A00B5365B /* minizip */,
-				329CD2451C1FF70A00B5365B /* SSZipArchive.h */,
-				329CD2461C1FF70A00B5365B /* SSZipArchive.m */,
-				329CD2471C1FF70A00B5365B /* ZipPlugin.h */,
-				329CD2481C1FF70A00B5365B /* ZipPlugin.m */,
+				32B25F721D936C8500C56855 /* aes */,
+				32B25F881D936C8500C56855 /* Common.h */,
+				32B25F891D936C8500C56855 /* minizip */,
+				32B25F931D936C8500C56855 /* SSZipArchive.h */,
+				32B25F941D936C8500C56855 /* SSZipArchive.m */,
+				32B25F951D936C8500C56855 /* ZipPlugin.h */,
+				32B25F961D936C8500C56855 /* ZipPlugin.m */,
 			);
 			path = RCTZip;
 			sourceTree = "<group>";
@@ -155,12 +216,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				329CD24E1C1FF70A00B5365B /* ZipPlugin.m in Sources */,
-				329CD24B1C1FF70A00B5365B /* unzip.c in Sources */,
-				329CD24D1C1FF70A00B5365B /* SSZipArchive.m in Sources */,
-				329CD24C1C1FF70A00B5365B /* zip.c in Sources */,
-				329CD24A1C1FF70A00B5365B /* mztools.c in Sources */,
-				329CD2491C1FF70A00B5365B /* ioapi.c in Sources */,
+				32B25F9E1D936C8500C56855 /* pwd2key.c in Sources */,
+				32B25F9C1D936C8500C56855 /* hmac.c in Sources */,
+				32B25F971D936C8500C56855 /* aescrypt.c in Sources */,
+				32B25F9F1D936C8500C56855 /* sha1.c in Sources */,
+				32B25FA01D936C8500C56855 /* ioapi.c in Sources */,
+				32B25FA11D936C8500C56855 /* mztools.c in Sources */,
+				32B25FA21D936C8500C56855 /* unzip.c in Sources */,
+				32B25F991D936C8500C56855 /* aestab.c in Sources */,
+				32B25F981D936C8500C56855 /* aeskey.c in Sources */,
+				32B25F9B1D936C8500C56855 /* fileenc.c in Sources */,
+				32B25FA31D936C8500C56855 /* zip.c in Sources */,
+				32B25F9D1D936C8500C56855 /* prng.c in Sources */,
+				32B25FA51D936C8500C56855 /* ZipPlugin.m in Sources */,
+				32B25FA41D936C8500C56855 /* SSZipArchive.m in Sources */,
+				32B25F9A1D936C8500C56855 /* entropy.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +323,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../react-native/React/**",
 					"$(SRCROOT)/../../react-native-cordova/ios/RCTCordova",
+					"$(SRCROOT)/../../../../../node_modules/react-native/React/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -268,6 +339,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../react-native/React/**",
 					"$(SRCROOT)/../../react-native-cordova/ios/RCTCordova",
+					"$(SRCROOT)/../../../../../node_modules/react-native/React/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
